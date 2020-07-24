@@ -5,4 +5,17 @@ attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</
 maxZoom: 18
 }).addTo(mymap);
 
-L.marker([4.7199651,-74.0512327]).addTo(mymap);
+//L.marker([4.7199651,-74.0512327]).addTo(mymap);
+
+
+$.ajax({
+    dataType: "json",
+    url: "api/bicicletas",
+    success: function(result){
+        console.log(result);
+        result.bicicletas.forEach(function(bici){
+            L.marker(bici.ubicacion, {title: bici.id}).addTo(mymap);
+        });
+    }
+});
+    
