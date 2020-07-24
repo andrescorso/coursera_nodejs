@@ -1,2 +1,2 @@
-# coursera_nodejs
-Node JS First steps 
+# Desarrollo del lado servidor: NodeJS, Express y Mongo
+Curso en coursera
